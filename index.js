@@ -44,11 +44,11 @@ let products = [
   },
 ];
 
-carts.forEach((cart) => {
-  cart.addEventListener('click', () => {
-    cartNumbers();
+for (let i = 0; i < carts.length; i++) {
+  carts[i].addEventListener('click', () => {
+    cartNumbers(products[i]);
   });
-});
+}
 
 function onLoadCartNumbers() {
   let productNumbers = parseInt(localStorage.getItem('cartNumbers'));
@@ -57,7 +57,8 @@ function onLoadCartNumbers() {
   }
 }
 
-function cartNumbers() {
+function cartNumbers(product) {
+  console.log('the product clicked is', product);
   let productNumbers = parseInt(localStorage.getItem('cartNumbers'));
   if (productNumbers) {
     localStorage.setItem('cartNumbers', productNumbers + 1);
