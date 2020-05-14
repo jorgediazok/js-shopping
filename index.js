@@ -50,6 +50,13 @@ carts.forEach((cart) => {
   });
 });
 
+function onLoadCartNumbers() {
+  let productNumbers = parseInt(localStorage.getItem('cartNumbers'));
+  if (productNumbers) {
+    document.querySelector('.cart span').textContent = productNumbers;
+  }
+}
+
 function cartNumbers() {
   let productNumbers = parseInt(localStorage.getItem('cartNumbers'));
   if (productNumbers) {
@@ -60,3 +67,5 @@ function cartNumbers() {
     document.querySelector('.cart span').textContent = 1;
   }
 }
+
+onLoadCartNumbers();
