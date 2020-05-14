@@ -80,6 +80,7 @@ li a {
 .image {
   margin-right: 20px;
   margin-left: 20px;
+  margin-top: 30px;
   position: relative;
   overflow: hidden;
 }
@@ -109,4 +110,9 @@ img {
   opacity: 1;
   padding: 10px;
   text-decoration: none;
+}
+
+h3 {
+  text-align: center;
+  font-size: 2rem;
 }
