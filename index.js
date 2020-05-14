@@ -101,4 +101,10 @@ function totalCost(product) {
   }
 }
 
+function displayCart() {
+  let carItems = localStorage.getItem('productsInCart');
+  carItems = JSON.parse(carItems);
+}
+
 onLoadCartNumbers();
+displayCart();
